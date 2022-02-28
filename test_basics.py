@@ -5,11 +5,11 @@ fig = go.Figure()
 # within same bogie axle to axle distance i.e axle 1 to axle2 = 2.7 mts = 2700mm
 # within same coach boggie to boggoe min distance i.e axle 2 to axle3 = 12mts = 12000mm
 # bogie to bogie min in between coaches i.e axle4 of coach 1 to axle1 of coach2 = 6.13 m = 6130mm
-output = r'C:\#DATA\WPMS\embedded\160kmph_four_coaches_train.txt'
-number_of_coaches = 4
+output = r'C:\#DATA\WPMS\embedded\30kmph_two_coaches_train.txt'
+number_of_coaches = 2
 
 
-train_speed_kmph = 160
+train_speed_kmph = 30
 train_speed_mmpms = train_speed_kmph / 3.6
 
 # m/s = mm/ms
@@ -98,8 +98,8 @@ def save_sorted_times_with_tag(sorted_times, file):
         log.write(str(time[0]) + '\n')
     log.close()
 
-
-wheel_sensor_times = get_WL_TL_TR_WR(number_of_coaches)
-save_sorted_times_with_tag(wheel_sensor_times, output)
-add_impulse_times(np.asarray(wheel_sensor_times))
-fig.show()
+#
+# wheel_sensor_times = get_WL_TL_TR_WR(number_of_coaches)
+# save_sorted_times_with_tag(wheel_sensor_times, output)
+# add_impulse_times(np.asarray(wheel_sensor_times))
+# fig.show()
